@@ -185,7 +185,7 @@ def main():
             users_ip = input("Please enter a valid IP Address; the values must range from 0-255 in the (X.X.X.X) format.")
             split_octects(users_ip)  # splits users up into octects
             valid_ip_address(split_octects(users_ip))
-        except ValueError:
+        except ValueError: # value error repeats until received satisfied answer
             continue
         else:
             break
