@@ -30,7 +30,7 @@ def valid_cidr(cidr_value):
 def user_cidr(cidr_value):
     next_block_address = three_class_boundaries(cidr_value)
     block_size = subnet_block_size(cidr_value, next_block_address)
-
+    print("")
     print("General Network Information")
     print("------------------------------------------------")
     network_bits_ones = cidr_value
@@ -120,6 +120,8 @@ def class_a(users_ip, cidr_value):
     for subnet in range(0, 255, block_size):
         print(layout.format(str(subnet) + '.0' + '.0', str(subnet) + '.0' + '.1', str((subnet + block_size) - 1)
                             + '.255' + '.254', str((subnet + block_size) - 1) + '.255' + '.255'))
+        str(subnet_counter)
+        subnet_counter += 1
         if subnet_counter == 8:
             break
     print("--------------------------------------------------")
