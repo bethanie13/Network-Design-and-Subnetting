@@ -102,7 +102,7 @@ def table_results(letter, ipDict, subnet_mask):
 
 
 def calculate_block_size(subnet_mask):
-    return int(256-subnet_mask)
+    return int(256-subnet_mask)  # diff way
 
 
 def calculate_subnet_class_C(ipDict, subnet_mask):  # calculates subnets for class C
